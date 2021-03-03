@@ -1,3 +1,3 @@
 # Translate page sandbox
 
-Translate text to Russian.
+Translate text from English to Russian.
