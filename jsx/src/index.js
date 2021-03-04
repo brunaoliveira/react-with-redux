@@ -1,19 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-// if (module.hot) {
-//     module.hot.accept();
-// }
 
 const App = function() {
     const buttonText = { text: 'Click me!' };
-    const style = { backgroundColor: 'blue', color: 'white' };
 
+    if (module.hot) {
+        module.hot.accept();
+    }
+    
     return (
         <div>
-            <label className="label" for="name">Enter name: </label>
+            <label className="label" htmlFor="name">Enter name: </label>
             <input id="name" type="text" />
-            <button style={ style }>
+            <button style={{ backgroundColor: 'blue', color: 'white' }}>
                 { buttonText.text }
             </button>
         </div>
