@@ -3,6 +3,6 @@
 
 ```
 git clone 
-cd jsx
+cd <chosen dir>
 npm start
 ```
