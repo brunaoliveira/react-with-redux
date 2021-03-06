@@ -1,22 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const App = () => {
-    if (module.hot) {
-        module.hot.accept();
-    }
-
-    window.navigator.geolocation.getCurrentPosition(
-        (position) => console.log(position),
-        (err) => console.log(err)
-    );
-
-    return (
+class App extends React.Component {
+    render() {
+        if (module.hot) {
+            module.hot.accept();
+        }
+    
+        window.navigator.geolocation.getCurrentPosition(
+            (position) => console.log(position),
+            (err) => console.log(err)
+        );
+        
         <div>
-            ssss
+            Latitude: {}
         </div>
-    );
-};
+    }
+}
 
 ReactDOM.render(
     <App />,
