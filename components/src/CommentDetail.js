@@ -1,14 +1,13 @@
 import React from 'react';
-import faker from 'faker';
 
 const CommentDetail = (props) => {
     return (
-        <div className="coment">
-            <a href="/" className="avatar">
-                <img alt="avatar" style={{ width: "80px" }} src={faker.image.image()} />
+        <div className="coment" style={{display: 'flex', flexDirection: 'row'}}>
+            <a href="/" className="ui middle aligned rounded tiny image">
+                <img alt="avatar" src={props.avatar} />
             </a>
-            <div className="content" className="author">
-                <a href="/">
+            <div className="content" style={{marginLeft: '0.8em'}}>
+                <a href="/" className="author">
                     {props.author}
                 </a>
                 <div className="metadata">

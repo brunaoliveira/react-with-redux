@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import faker from 'faker';
 import CommentDetail from './CommentDetail';
+import ApprovalCard from './ApprovalCard';
 
 const App = () => {
     if (module.hot) {
@@ -10,12 +11,31 @@ const App = () => {
     console.log(faker.name.findName());
     return (
         <div className="ui container comments">
-            <CommentDetail 
-                author={ faker.name.findName() } 
-                timeAgo={ faker.date.recent().toLocaleString() } 
-                content={ faker.lorem.text() } />
-            <CommentDetail author={ faker.name.findName() } timeAgo={ faker.date.recent().toLocaleString() } content={ faker.lorem.text() } />
-            <CommentDetail author={ faker.name.findName() } timeAgo={ faker.date.recent().toLocaleString() } content={ faker.lorem.text() } />
+            <br/>
+            <ApprovalCard>
+                <CommentDetail 
+                    author={ faker.name.findName() } 
+                    timeAgo={ faker.date.recent().toLocaleString() } 
+                    content={ faker.lorem.words() } 
+                    avatar={ faker.image.image() }
+                />
+            </ApprovalCard>
+            <ApprovalCard>
+                <CommentDetail 
+                    author={ faker.name.findName() } 
+                    timeAgo={ faker.date.recent().toLocaleString() } 
+                    content={ faker.lorem.words() } 
+                    avatar={ faker.image.image() }
+                />
+            </ApprovalCard>
+            <ApprovalCard>
+                <CommentDetail 
+                    author={ faker.name.findName() } 
+                    timeAgo={ faker.date.recent().toLocaleString() } 
+                    content={ faker.lorem.words() } 
+                    avatar={ faker.image.image() }
+                />
+            </ApprovalCard>
         </div>
     );
 };
