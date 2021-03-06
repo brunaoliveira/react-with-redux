@@ -11,10 +11,12 @@ class App extends React.Component {
             (position) => console.log(position),
             (err) => console.log(err)
         );
-        
-        <div>
-            Latitude: {}
-        </div>
+
+        return (
+            <div>
+                Latitude: 
+            </div>
+        )
     }
 }
 
