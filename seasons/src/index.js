@@ -5,10 +5,15 @@ const App = () => {
     if (module.hot) {
         module.hot.accept();
     }
-    
+
+    window.navigator.geolocation.getCurrentPosition(
+        (position) => console.log(position),
+        (err) => console.log(err)
+    );
+
     return (
         <div>
-
+            ssss
         </div>
     );
 };
