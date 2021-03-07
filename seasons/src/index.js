@@ -26,6 +26,7 @@ class App extends React.Component {
         return (
             <div>
                 Latitude: {this.state.lat}
+                <br />
                 Error: {this.state.errorMessage}
             </div>
         )
