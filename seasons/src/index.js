@@ -7,7 +7,6 @@ class App extends React.Component {
         super(props);
         // the only time direct assignment to this.state is allowed! (use setState)
         this.state = { lat: null, errorMessage: '' };
-
     }
      
     componentDidMount() {
