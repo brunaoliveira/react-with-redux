@@ -8,6 +8,9 @@ class App extends React.Component {
         // the only time direct assignment to this.state is allowed! (use setState)
         this.state = { lat: null, errorMessage: '' };
 
+    }
+     
+    componentDidMount() {
         window.navigator.geolocation.getCurrentPosition(
             position => {
                 this.setState({ lat: position.coords.latitude });
@@ -17,7 +20,12 @@ class App extends React.Component {
             }
         );
     }
-     
+
+    // logo após ser chamado, chama render()
+    componentDidUpdate() {
+        console.log('update');
+    }
+
     render() {
         if (module.hot) {
             module.hot.accept();
